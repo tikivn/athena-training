@@ -1,0 +1,8 @@
+requests
+Flask
+pandas
+numpy
+tzlocal
+gunicorn
+matplotlib
+scikit-learn
