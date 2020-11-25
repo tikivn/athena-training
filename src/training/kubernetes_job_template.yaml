@@ -11,7 +11,7 @@ spec:
       containers:
       - name: "darknet-training"
         image: "asia.gcr.io/tikivn/mlflow"
-        command: ["python3 train.py"]
+        command: ["python train.py"]
       resources:
         limits:
           memory: 1024Mi

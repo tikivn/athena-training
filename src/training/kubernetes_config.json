@@ -1,6 +1,5 @@
 {
     "kube-context": "k8s-ai-prod",
-    "kube-job-template-path": "/home/jenkins/mlflow_training_test/kubernetes_job_template.yaml",
+    "kube-job-template-path": "/home/jenkins/athena-training/src/training/kubernetes_job_template.yaml",
     "repository-uri": "asia.gcr.io/tikivn/mlflow"
-    
 }
