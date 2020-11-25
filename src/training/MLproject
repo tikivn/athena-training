@@ -1,0 +1,11 @@
+name: mlflow-model
+
+docker_env:
+  image: hub.infra.tiki.services/ci/mlflow-base-image:latest
+
+entry_points:
+  main:
+    parameters:
+      alpha: float
+      l1_ratio: {type: float, default: 0.1}
+    command: "python3 src/training/train.py"
