@@ -22,14 +22,15 @@ import numpy as np
 import pandas as pd
 import mlflow
 
-experiment = 'mlflow_test'
+experiment = 'darknet_training'
 #  if not mlflow.get_experiment_by_name(experiment):
 #      client = mlflow.tracking.MlflowClient()
 #      client.create_experiment(experiment)
 #  mlflow.set_experiment(experiment)
 
 def init_experiment(experiment_name):
-    existing_experiments = mlflow.tracking.MlflowClient().list_experiments()
+    existing_experiments = mlflow.tracking.MlflowClient(os.environ['MLFLOW_TRACKING_URI']).list_experiments()
+    logging.info(existing_experiments)
     if experiment_name in [exp.name for exp in existing_experiments]:
         mlflow.set_experiment(experiment_name)
     else:
